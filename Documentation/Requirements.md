@@ -9,3 +9,4 @@
 |Req 7|Accept user submitted puns for future use, with credit provided|1|
 |Req 8|Developer tool that can be used for quickly editing the database|3|
 |Req 9|Give information about monsters to users through Discord|5|
+|Req 10|Parse user inputted strings for validity before accepting them|4|
