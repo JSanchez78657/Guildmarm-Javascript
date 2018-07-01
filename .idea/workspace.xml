@@ -1,250 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5f36eff-4d6c-4a19-9054-b40774eed0f2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/coverage.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/async-throttle/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/async-throttle/index.js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/sort-arrow-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov-report/sorter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/coverage/lcov.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/async-limiter/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/dist/common-tags.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/TemplateTag/TemplateTag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/TemplateTag/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/codeBlock/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/commaLists/commaLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/commaLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/commaListsAnd/commaListsAnd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/commaListsAnd/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/commaListsOr/commaListsOr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/commaListsOr/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/html/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/html/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/inlineArrayTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/inlineArrayTransformer/inlineArrayTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/inlineLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/inlineLists/inlineLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLine/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLine/oneLine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineCommaLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineCommaLists/oneLineCommaLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineCommaListsAnd/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineCommaListsAnd/oneLineCommaListsAnd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineCommaListsOr/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineCommaListsOr/oneLineCommaListsOr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineInlineLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineInlineLists/oneLineInlineLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineTrim/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/oneLineTrim/oneLineTrim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/removeNonPrintingValuesTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/removeNonPrintingValuesTransformer/removeNonPrintingValuesTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/replaceResultTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/replaceResultTransformer/replaceResultTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/replaceStringTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/replaceStringTransformer/replaceStringTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/replaceSubstitutionTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/replaceSubstitutionTransformer/replaceSubstitutionTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/safeHtml/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/safeHtml/safeHtml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/source/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/splitStringTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/splitStringTransformer/splitStringTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/stripIndent/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/stripIndent/stripIndent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/stripIndentTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/stripIndentTransformer/stripIndentTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/stripIndents/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/stripIndents/stripIndents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/trimResultTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/trimResultTransformer/trimResultTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/utils/readFromFixture/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/es/utils/readFromFixture/readFromFixture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/TemplateTag/TemplateTag.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/TemplateTag/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/codeBlock/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/commaLists/commaLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/commaLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/commaListsAnd/commaListsAnd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/commaListsAnd/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/commaListsOr/commaListsOr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/commaListsOr/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/html/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/html/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/inlineArrayTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/inlineArrayTransformer/inlineArrayTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/inlineLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/inlineLists/inlineLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLine/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLine/oneLine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineCommaLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineCommaLists/oneLineCommaLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineCommaListsAnd/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineCommaListsAnd/oneLineCommaListsAnd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineCommaListsOr/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineCommaListsOr/oneLineCommaListsOr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineInlineLists/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineInlineLists/oneLineInlineLists.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineTrim/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/oneLineTrim/oneLineTrim.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/removeNonPrintingValuesTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/removeNonPrintingValuesTransformer/removeNonPrintingValuesTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/replaceResultTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/replaceResultTransformer/replaceResultTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/replaceStringTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/replaceStringTransformer/replaceStringTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/replaceSubstitutionTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/replaceSubstitutionTransformer/replaceSubstitutionTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/safeHtml/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/safeHtml/safeHtml.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/source/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/splitStringTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/splitStringTransformer/splitStringTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/stripIndent/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/stripIndent/stripIndent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/stripIndentTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/stripIndentTransformer/stripIndentTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/stripIndents/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/stripIndents/stripIndents.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/trimResultTransformer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/trimResultTransformer/trimResultTransformer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/utils/readFromFixture/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/lib/utils/readFromFixture/readFromFixture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/license.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/common-tags/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/discord.js-commando/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/discord.js-commando/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/discord.js-commando/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/discord.js/.gitmodules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/discord.js/.tern-project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/escape-string-regexp/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/escape-string-regexp/license" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/escape-string-regexp/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/escape-string-regexp/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/dist/long.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/dist/long.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/long/src/long.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/output.opus" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/Prism.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/opus/OggOpus.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/transcoders/MediaTranscoder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/transcoders/ffmpeg/Ffmpeg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/transcoders/ffmpeg/FfmpegProcess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/src/util/Constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/test/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/prism-media/test/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require-all/Changes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require-all/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require-all/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require-all/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require-all/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require.js/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require.js/test/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/require.js/test/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/safe-buffer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/safe-buffer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/safe-buffer/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/safe-buffer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/safe-buffer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/.github/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/docs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/esm.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/scripts/travis-deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/scripts/travis-test.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/FormData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/mime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/mimeOfBuffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/mimes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/transports/ResponseStream.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/transports/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/node/transports/http2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/src/qs_mock.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/browser/http1.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/browser/http2.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/browser/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/interop.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/node/file.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/node/http1.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/node/http2.test.js.disabled" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/node/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/node/sync.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/node/util.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/test/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/snekfetch/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/AUTHORS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/PULL_REQUEST_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/nacl-fast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/nacl-fast.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/nacl.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/nacl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/nacl.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/tweetnacl/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/buffer-util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/constants.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/event-target.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/extension.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/permessage-deflate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/receiver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/sender.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/validation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/websocket-server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/lib/websocket.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node_modules/ws/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/joels.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/joels.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c5f36eff-4d6c-4a19-9054-b40774eed0f2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -285,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/Documentation/UseCases.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="-681" />
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -468,7 +225,7 @@
       <workItem from="1530455853837" duration="8291000" />
       <workItem from="1530465851806" duration="5000" />
       <workItem from="1530465993511" duration="608000" />
-      <workItem from="1530466934732" duration="453000" />
+      <workItem from="1530466934732" duration="810000" />
     </task>
     <task id="LOCAL-00001" summary="Added the test cases.">
       <created>1529856813154</created>
@@ -477,23 +234,30 @@
       <option name="project" value="LOCAL" />
       <updated>1529856813154</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Discord.js, Discord.js-commando, and fs through Node, as well as added login code, and the beginnings of adding commands">
+      <created>1530467506265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530467506265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20637000" />
+    <option name="totallyTimeSpent" value="20994000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20179136" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20179136" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32985386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32985386" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49947312" visible="true" weight="0.32985386" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -554,7 +318,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added the test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the test cases." />
+    <MESSAGE value="Added Discord.js, Discord.js-commando, and fs through Node, as well as added login code, and the beginnings of adding commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Discord.js, Discord.js-commando, and fs through Node, as well as added login code, and the beginnings of adding commands" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -697,7 +462,7 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="-681" />
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
