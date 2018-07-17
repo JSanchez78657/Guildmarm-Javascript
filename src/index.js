@@ -2,11 +2,11 @@ const Commando = require('discord.js-commando');
 const Guildmarm = new Commando.Client();
 const fs = require('fs');
 
-let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString();
-var token = rawText.substring(0, rawText.indexOf("\r"));
+let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
+var token = rawText[0];
 
-Guildmarm.registry.registerGroup('monsterinfo', 'MonsterInfo');
+Guildmarm.registry.registerGroup('monsterinfo');
 Guildmarm.registry.registerDefaults();
-Guildmarm.registry.registerCommandsIn('./commands');
+Guildmarm.registry.registerCommandsIn(__dirname + '/commands');
 
 Guildmarm.login(token);

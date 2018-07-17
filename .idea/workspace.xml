@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5f36eff-4d6c-4a19-9054-b40774eed0f2" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/commands/monsterinfo/monsterdesc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/UseCases.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/UseCases.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +38,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+=======
+      <file leaf-file-name="Requirements.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Documentation/Requirements.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="242">
+                <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
             </state>
           </provider>
         </entry>
@@ -42,19 +64,54 @@
         <entry file="file://$PROJECT_DIR$/Documentation/UseCases.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
+<<<<<<< HEAD
               <first_editor relative-caret-position="85">
                 <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               </first_editor>
               <second_editor />
+=======
+              <first_editor relative-caret-position="197">
+                <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+=======
+      <file leaf-file-name="SophiaPWD.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/SophiaPWD.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monsterdesc.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/commands/monsterinfo/monsterdesc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
             </state>
           </provider>
         </entry>
@@ -76,13 +133,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Documentation/UseCases.md" />
+=======
+        <option value="$PROJECT_DIR$/.gitignore" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
         <option value="$PROJECT_DIR$/Documentation/Requirements.md" />
         <option value="$PROJECT_DIR$/Documentation/TestCases.md" />
         <option value="$PROJECT_DIR$/src/package.json" />
-        <option value="$PROJECT_DIR$/src/resources/SophiaPWD.txt" />
+        <option value="$PROJECT_DIR$/src/commands/monsterinfo/monsterdescription.js" />
+        <option value="$PROJECT_DIR$/src/commands/monsterinfo/monsterDescription.js" />
+        <option value="$PROJECT_DIR$/Documentation/UseCases.md" />
         <option value="$PROJECT_DIR$/src/index.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/src/resources/SophiaPWD.txt" />
+        <option value="$PROJECT_DIR$/src/commands/monsterinfo/monsterdesc.js" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
       </list>
     </option>
   </component>
@@ -101,8 +169,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="469" />
-    <option name="y" value="3" />
+    <option name="x" value="590" />
+    <option name="y" value="173" />
     <option name="width" value="1346" />
     <option name="height" value="728" />
   </component>
@@ -119,6 +187,38 @@
               <item name="Guildmarm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Guildmarm" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="Guildmarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guildmarm" type="462c0819:PsiDirectoryNode" />
+              <item name="Documentation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guildmarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guildmarm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guildmarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guildmarm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guildmarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guildmarm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="monsterinfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Guildmarm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Guildmarm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
           </expand>
           <select />
         </subPane>
@@ -134,7 +234,7 @@
     <property name="javascript.nodejs.core.library.configured.version" value="8.9.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -200,6 +300,11 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -219,9 +324,15 @@
       <workItem from="1530455853837" duration="8291000" />
       <workItem from="1530465851806" duration="5000" />
       <workItem from="1530465993511" duration="608000" />
+<<<<<<< HEAD
       <workItem from="1530466934732" duration="453000" />
       <workItem from="1531752344857" duration="41000" />
       <workItem from="1531836578323" duration="275000" />
+=======
+      <workItem from="1530466934732" duration="810000" />
+      <workItem from="1530635529093" duration="345000" />
+      <workItem from="1530635936398" duration="10095000" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
     </task>
     <task id="LOCAL-00001" summary="Added the test cases.">
       <created>1529856813154</created>
@@ -230,24 +341,43 @@
       <option name="project" value="LOCAL" />
       <updated>1529856813154</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added Discord.js, Discord.js-commando, and fs through Node, as well as added login code, and the beginnings of adding commands">
+      <created>1530467506265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530467506265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="21069000" />
+=======
+    <option name="totallyTimeSpent" value="31434000" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20163691" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20179136" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32985386" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32985386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32972136" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49947312" weight="0.32985386" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39979124" />
       <window_info anchor="right" id="Palette" order="3" />
@@ -274,14 +404,15 @@
       <window_info anchor="bottom" id="Find" order="2" weight="0.32985386" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.32985386" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="1" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19915701" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32985386" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -292,9 +423,13 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32985386" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="11" />
+=======
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
       <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32985386" />
       <window_info anchor="right" id="Database" order="7" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info id="Favorites" order="6" side_tool="true" />
@@ -308,11 +443,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added the test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the test cases." />
+    <MESSAGE value="Added Discord.js, Discord.js-commando, and fs through Node, as well as added login code, and the beginnings of adding commands" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Discord.js, Discord.js-commando, and fs through Node, as well as added login code, and the beginnings of adding commands" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -346,8 +482,64 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Guildmarm.iml">
       <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/Documentation/Requirements.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/SophiaPWD.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/UseCases.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/Requirements.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/SophiaPWD.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/UseCases.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/Requirements.md" />
+    <entry file="file://$PROJECT_DIR$/src/resources/SophiaPWD.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="59" />
+        </state>
+      </provider>
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
     </entry>
     <entry file="file://$PROJECT_DIR$/Guildmarm.iml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -398,7 +590,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/package-lock.json" />
     <entry file="file://$PROJECT_DIR$/src/SophiaPWD.txt" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/resources/SophiaPWD.txt" />
+=======
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
     <entry file="file://$PROJECT_DIR$/src/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -407,16 +602,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Documentation/Requirements.md">
+<<<<<<< HEAD
       <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+=======
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="242">
+            <caret line="11" column="71" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Documentation/UseCases.md">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="85">
@@ -435,6 +643,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+=======
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="197">
+            <caret line="54" column="65" selection-start-line="54" selection-start-column="65" selection-end-line="54" selection-end-column="65" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+>>>>>>> cf19b86e0cbc87b8c82faa9815f16a004b44678d
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/SophiaPWD.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/commands/monsterinfo/monsterdesc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
         </state>
       </provider>
     </entry>
