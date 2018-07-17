@@ -13,12 +13,12 @@
 |**Tested Actors**|StringValidator, ErrorMessage|
 |**Expected Result**|Guildmarm informs the user of illegal characters.|
 |**Flow of events for test scenario**||
-|1.|Test queries "@Guildmarm -Numeric-"|
+|1.|Test queries "!-Command- -Numeric-"|
 |2.|StringValidator detects numeric input.|
 |3.|StringValidator calls ErrorMessage, passing "Numeric."|
 |4.|ErrorMessage tells Guildmarm of the numeric input.|
 |5.|Guildmarm responds "Sorry, but I have never seen a monster with a number in it's name!"|
-|6.|Test queries "@Guildmarm -Symbolic-"|
+|6.|Test queries !-Command- -Symbolic-"|
 |7.|StringValidator detects symbolic input.|
 |8.|StringValidator calls ErrorMessage, passing "Symbolic."|
 |9.|ErrorMessage tells Guildmarm of the Symbolic input.|
