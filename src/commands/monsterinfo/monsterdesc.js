@@ -19,7 +19,7 @@ class Monsterdesc extends Commando.Command
         const fs = require('fs');
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
-        const apiKey = rawText[5];
+        const apiKey = rawText[1];
         const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + args.toString() + '"}';
 
         const options =
