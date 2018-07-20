@@ -121,11 +121,11 @@ class Monsterrecc extends Commando.Command
                     if (item.includes("Resistances"))
                     {
                         const rawRes = String(item.substr(item.indexOf('":"') + 3, item.lastIndexOf('"')));
-                        var resArr = rawRes.split("\\n");
+                        let resArr = rawRes.split("\\n");
                         const hold = resArr.length - 1;
-                        var strHold = String();
-                        var sum = 0;
-                        var maxSum, maxDmg, maxEle, bestPart, i, j;
+                        let strHold = String();
+                        let sum = 0;
+                        let maxSum, maxDmg, maxEle, bestPart, i, j;
                         for (i = 0; i < hold; ++i)
                         {
                             strHold = resArr[i];
