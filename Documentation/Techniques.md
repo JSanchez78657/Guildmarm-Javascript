@@ -211,3 +211,69 @@ quests themselves. The string is tokenized with spaces and newlines, and will be
 |33|Pl|1|18|
 |34|IR-G|3|10|
 |35|IR-S|1|12|
+
+# Monster Drops
+TBD
+
+# Quests
+
+##### *Quest Symbols*
+|Symbol|Meaning|
+|---|---|
+|AC|After Cutscene|
+|HRP|Hunter Rank Points|
+|IS|Initial Spawn|
+ 
+Quests will have data space for the name, rank, map, monster(s), type, prerequisites, objectives, failure conditions, 
+reward, and drops.
+Monster will be stored as such:
+```
+Barroth,IS,100,210,2520
+Rathian,IS,100,280,4320
+Diablos,IS,100,350,5400 
+```
+Can be stored in array as such:
+
+| |Name|Spawn|Chance|HRP|Zenny|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|Index|0|1|3|4|5|
+|0|Barroth|IS|100|210|2520|
+|1|Rathian|IS|100|280|4320|
+|2|Diablos|IS|100|350|5400|
+
+Drops will be stored as such:
+```
+Monster Bone M,1,24
+Earth Crystal,1,20
+Boulder Bone,1,16
+Monster Bone S,2,15
+Nitroshroom,3,12
+Thunderbug,3,12
+Armor Sphere,1,1
+```
+Can be stored in array as such:
+
+| |Name|Quantity|Chance|
+|:---:|:---:|:---:|:---:|
+|Index|0|1|2|
+|0|Monster Bone M|1|24|
+|1|Earth Crystal|1|20|
+|2|Boulder Bone|1|16|
+|3|Monster Bone S|2|15|
+|4|Nitroshroom|3|12|
+|5|Thunderbug|3|12|
+|6|Armor Sphere|1|1|
+
+Prerequisites will be stored as such:
+```
+100|Barroth Quest|Barroth|Barroth|Barroth|Barroth|
+```
+> I couldn't find an example of a quest that had every requirement, forgive me for silliness.
+
+Can be stored in array as such:
+
+|HR|Quest(s)|Find|Hunt|Capture|Research|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|0|1|2|3|4|5|
+|100|Barroth Quest|Barroth|Barroth|Barroth|Barroth|
+
