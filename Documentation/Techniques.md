@@ -94,7 +94,7 @@ column), and the maximum among the totals determines the monster
 weakness. There is also a consideration for the optimal location on the 
 monster to strike. This location is determined by going through each 
 body part available on the monster and calculating the damage an attack 
-would deal with a motion value of 1 with a sharpness multiplier of 1 on 
+would deal with a motion value of 1 with a sharpness multiplier of on 
 a normal hit, with the optimal element and damage type, the part that
 returns the greatest value is be the recommended area to attack.
 Each monster weakness recommendation is be given with both categories
@@ -222,6 +222,7 @@ TBD
 |---|---|
 |AC|After Cutscene|
 |HRP|Hunter Rank Points|
+|HR|Hunter Rank|
 |IS|Initial Spawn|
  
 Quests will have data space for the name, rank, map, monster(s), type, prerequisites, objectives, failure conditions, 
@@ -277,3 +278,9 @@ Can be stored in array as such:
 |0|1|2|3|4|5|
 |100|Barroth Quest|Barroth|Barroth|Barroth|Barroth|
 
+# Quest Requests
+When a request is made to give information about a quest, responses will be given as such:
+> Alright, Barroth Quest 2 is an Optional HR 100 quest, in order to take the quest, you need to have completed Barroth 
+Quest, found a Barroth, hunted a Barroth, captured a Barroth, and researched a Barroth. In the quest, you must hunt a 
+Barroth in Wildspire Waste before you faint 3 times or time runs out. Monsters that can appear in this quest: Barroth. 
+Completing this quest awards you with a Barroth Amulet. Potential drops include Barroth Gem (100%).
