@@ -35,11 +35,17 @@ class Monsterdesc extends Commando.Command
 
         request(options, function (error, response, body) {
             if (error) throw new Error(error);
+            //Checks if there was an actual monster requested at all.
             if(!args) message.reply('I can\'t just look up nothing!');
+            //Checks if the database had an actual entry for the monster requested.
             else if(body !== '[]')
             {
-                body = body.toString().substring(2, body.lastIndexOf('}]')).split(',');
+                //Remove the end bits of the string ("[{" and "}]), then separates the string using its separators.
+                //Original format of the string is "[{"data-name":"data", "data-name":"data",...,"data-name":"data"}].
+                body = body.toString().substring(2, body.lastIndexOf('}]')).split('","');
+                //Searches through the array for the specific category of information.
                 body.forEach(function (item) {
+                    //Extracts the actual data from the string.
                     if (item.includes("Description")) message.reply(item.substring(item.indexOf('":"') + 3, item.lastIndexOf('"')));
                 })
             }
