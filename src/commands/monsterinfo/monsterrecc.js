@@ -12,69 +12,55 @@ function intToDmg(int)
         case 6: return "thunder";
         case 7: return "ice";
         case 8: return "dragon";
-        default: return "ERROR";
+        default: return "love";
     }
 }
 
-function    keyToPart(key)
+function keyToPart(key)
 {
-    let part;
-    let fullName;
-    let modifier;
-    if(key.includes("-"))
-    {
-        modifier = key.substring(key.indexOf("-"), key.length - 1);
-        part = key.substring(0, key.indexOf("-"));
-    }
-    else part = key;
+    const k = key.split("-");
 
-    switch(part)
-    {
-        case "An": fullName = "antennae"; break;
-        case "Ba": fullName = "back"; break;
-        case "Bo": fullName = "body"; break;
-        case "Ch": fullName = "chest"; break;
-        case "Ex": fullName = "exhaust organ"; break;
-        case "Fi": fullName = "fin"; break;
-        case "FA": fullName = "forearms"; break;
-        case "FL": fullName = "forelegs"; break;
-        case "He": fullName = "head"; break;
-        case "HL": fullName = "hindlegs"; break;
-        case "Ho": fullName = "horn"; break;
-        case "Ja": fullName = "jaw"; break;
-        case "Le": fullName = "legs"; break;
-        case "LB": fullName = "lower body"; break;
-        case "Ne": fullName = "neck"; break;
-        case "No": fullName = "nose"; break;
-        case "NP": fullName = "neck pouch"; break;
-        case "Ro": fullName = "rock"; break;
-        case "Sh": fullName = "shell"; break;
-        case "Ta": fullName = "tail"; break;
-        case "TT": fullName = "tail tip"; break;
-        case "To": fullName = "tongue"; break;
-        case "Wi": fullName = "wings"; break;
-        default: fullName = " uhhh.... weak point"; break;
-    }
+    const part = {
+        "An":"antennae",
+        "Ba":"back",
+        "Bo":"body",
+        "Ch":"chest",
+        "Ex":"exhaust organ",
+        "Fi":"fin",
+        "FA":"forearms",
+        "FL":"forelegs",
+        "He":"head",
+        "HL":"hindlegs",
+        "Ho":"horn",
+        "Ja":"jaw",
+        "Le":"legs",
+        "LB":"lower body",
+        "Ne":"neck",
+        "No":"nose",
+        "NP":"neck pouch",
+        "Ro":"rock",
+        "Sh":"shell",
+        "Ta":"tail",
+        "TT":"tail tip",
+        "To":"tongue",
+        "Wi":"wings"
+    };
 
-    if(modifier.length > 0)
-    {
-        switch(modifier)
-        {
-            case "Bl": fullName = "black " + fullName; break;
-            case "Bo": fullName = "bony " + fullName; break;
-            case "CS": fullName += " while in it's critical state"; break;
-            case "E":  fullName = "electrified " + fullName; break;
-            case "GB": fullName = "glossy black " + fullName; break;
-            case "H":  fullName = "heated " + fullName; break;
-            case "MA": fullName = "magma covered " + fullName; break;
-            case "M":  fullName = "muddy " + fullName; break;
-            case "R1": fullName = "rock one on it's " + fullName; break;
-            case "R2": fullName = "rock two on it's " + fullName; break;
-            case "Wh": fullName = "white " + fullName; break;
-            case "Wo": fullName = "wounded " + fullName; break;
-        }
-    }
-    return fullName;
+    const modifier = {
+            "Bl":"black ",
+            "Bo":"bony ",
+            "CS":"critical ",
+            "E" :"electrified ",
+            "GB":"glossy black ",
+            "H" :"heated " ,
+            "MA":"magma covered ",
+            "M" :"muddy ",
+            "R1":"rock one on it's ",
+            "R2":"rock two on it's ",
+            "Wh":"white ",
+            "Wo":"wounded ",
+    };
+    return (modifier[k[1]] || "") + (part[k[0]] || "");
 }
 
 class Monsterrecc extends Commando.Command
@@ -126,7 +112,7 @@ class Monsterrecc extends Commando.Command
                     if (item.includes("Resistances"))
                     {
                         //Extracts the actual data from the string.
-                        const rawRes = String(item.substr(item.indexOf('":"') + 3, item.lastIndexOf('"')));
+                        const rawRes = String(item.substr(item.indexOf('":"') + 3, item.length - 1));
                         //Separates the string into an array of strings
                         //In this case, "-body part- x x x x x x x" where x is a number.
                         let resArr = rawRes.split("\\n");
@@ -183,7 +169,7 @@ class Monsterrecc extends Commando.Command
                         }
                         message.reply("Alright doodle, if you want to take down a " + args.toString() +
                                       ", you should bring a " + intToDmg(maxDmg) + " " + intToDmg(maxEle) +
-                                      " weapon, and make sure to hit it's " + keyToPart(resArr[bestPart][0].toString()) +
+                                      " weapon, and make sure to hit it's " + keyToPart(resArr[bestPart][0]) +
                                       "!");
                     }
                 })
