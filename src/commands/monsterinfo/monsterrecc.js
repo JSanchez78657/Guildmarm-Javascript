@@ -1,19 +1,24 @@
 const Commando = require('discord.js-commando');
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
 function intToDmg(int)
 {
-    switch(int)
-    {
-        case 1: return "sever";
-        case 2: return "blunt";
-        case 3: return "shot";
-        case 4: return "fire";
-        case 5: return "water";
-        case 6: return "thunder";
-        case 7: return "ice";
-        case 8: return "dragon";
-        default: return "love";
-    }
+    const element = {
+        1:"sever",
+        2:"blunt",
+        3:"shot",
+        4:"fire",
+        5:"water",
+        6:"thunder",
+        7:"ice",
+        8:"dragon"
+    };
+    return (element[int] || "");
 }
 
 function keyToPart(key)
@@ -70,8 +75,8 @@ class Monsterrecc extends Commando.Command
         super(client, {
             name: 'monsterrecc',
             group: 'monsterinfo',
-            memberName: 'reccomendation',
-            description: 'Gives a reccomendation of what type of weapon to bring against this monster.'
+            memberName: 'recommendation',
+            description: 'Gives a recommendation of what type of weapon to bring against this monster.'
         });
     }
 
@@ -82,7 +87,7 @@ class Monsterrecc extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + args.toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
 
         const options =
         {
@@ -112,7 +117,7 @@ class Monsterrecc extends Commando.Command
                     if (item.includes("Resistances"))
                     {
                         //Extracts the actual data from the string.
-                        const rawRes = String(item.substr(item.indexOf('":"') + 3, item.length - 1));
+                        const rawRes = String(item.substr(item.indexOf('":"') + 3, item.length));
                         //Separates the string into an array of strings
                         //In this case, "-body part- x x x x x x x" where x is a number.
                         let resArr = rawRes.split("\\n");

@@ -1,43 +1,38 @@
 const Commando = require('discord.js-commando');
 
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
-
-class Monsterdesc extends Commando.Command
+class Questdesc extends Commando.Command
 {
-
     constructor(client)
     {
         super(client, {
-            name: 'monsterdesc',
-            group: 'monsterinfo',
+            name: 'questdesc',
+            group: 'questinfo',
             memberName: 'description',
-            description: 'Gives the in game journal description of a monster'
+            description: 'Gives the description of the components of the quest.'
         });
     }
 
     async run(message, args)
     {
+        //args.toLowerCase();
+        //args[0].toUpperCase();
         const request = require('request');
         const fs = require('fs');
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + args.toString() + '"}';
 
         const options =
-        {
-            method: 'GET',
-            url: url,
-            headers:
             {
-                'cache-control': 'no-cache',
-                'x-apikey': apiKey
-            }
-        };
+                method: 'GET',
+                url: url,
+                headers:
+                    {
+                        'cache-control': 'no-cache',
+                        'x-apikey': apiKey
+                    }
+            };
 
         request(options, function (error, response, body) {
             if (error) throw new Error(error);
@@ -59,5 +54,3 @@ class Monsterdesc extends Commando.Command
         });
     }
 }
-
-module.exports = Monsterdesc;

@@ -1,5 +1,11 @@
 const Commando = require('discord.js-commando');
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
 function keyToSource(key)
 {
     const k = key.split("-");
@@ -28,6 +34,61 @@ function keyToSource(key)
     return (source[k[0]] || "") + (modifier[k[1]] || "");
 }
 
+function parseDrops(item)
+{
+    const rawDrops = String(item.substring(item.indexOf('":"') + 3, item.length));
+    let dropArr = rawDrops.split("\\n");
+    let i, j, k, arrSize, strHold, arrHold, maxDrop, maxIndex;
+    arrSize = dropArr.length;
+    if(arrSize > 1)
+    {
+        for (i = 0; i < arrSize; ++i)
+        {
+            strHold = dropArr[i];
+            dropArr[i] = new Array(3);
+            if (strHold.includes("P: ")) dropArr[i][0] = strHold;
+            else dropArr[i] = strHold.split(" ");
+        }
+
+        for (i = 0; i < arrSize; ++i)
+        {
+            if (!dropArr[i][0].includes("P: "))
+            {
+                //some kind of sort
+                for (j = i; j < arrSize && !dropArr[j][0].includes("P: "); ++j)
+                {
+                    maxDrop = 0;
+                    for (k = j; k < arrSize && !dropArr[k][0].includes("P: "); ++k)
+                    {
+                        if (parseInt(dropArr[k][2]) > maxDrop)
+                        {
+                            maxDrop = dropArr[k][2];
+                            maxIndex = k;
+                        }
+                    }
+                    arrHold = dropArr[j];
+                    dropArr[j] = dropArr[maxIndex];
+                    dropArr[maxIndex] = arrHold;
+                }
+                i = j - 1;
+            }
+        }
+
+        strHold = "";
+        for (i = 0; i < arrSize; ++i)
+        {
+            if (dropArr[i][0].includes("P: ")) strHold += dropArr[i][0].substring(3, dropArr[i][0].length);
+            else
+            {
+                strHold += "\t" + keyToSource(dropArr[i][0]) + " (x" + dropArr[i][1] + "): " + dropArr[i][2] + "%";
+            }
+            strHold += "\n";
+        }
+    }
+    else strHold = "I have no data for " + item.substring(0, item.indexOf("Drops")).toLowerCase() + " rank drops! Sorry!";
+    return strHold;
+}
+
 class Monsterdrops extends Commando.Command
 {
 
@@ -48,7 +109,7 @@ class Monsterdrops extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + args.toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
 
         const options =
             {
@@ -73,57 +134,7 @@ class Monsterdrops extends Commando.Command
                 body = body.toString().substring(2, body.lastIndexOf('}]')).split('","');
                 //Searches through the array for the specific category of information.
                 body.forEach(function (item) {
-                    //Extracts the actual data from the string.
-                    if (item.includes("LowDrops"))
-                    {
-                        const rawDrops = String(item.substring(item.indexOf('":"') + 3, item.length));
-                        let dropArr = rawDrops.split("\\n");
-                        let i, j, k, arrSize, strHold, arrHold, maxDrop, maxIndex;
-                        arrSize = dropArr.length;
-                        for(i = 0; i < arrSize; ++i)
-                        {
-                            strHold = dropArr[i];
-                            dropArr[i] = new Array(3);
-                            if(strHold.includes("P: ")) dropArr[i][0] = strHold;
-                            else dropArr[i] = strHold.split(" ");
-                        }
-
-                        for(i = 0; i < arrSize; ++i)
-                        {
-                            if(!dropArr[i][0].includes("P: "))
-                            {
-                                //some kind of sort
-                                for(j = i; j < arrSize && !dropArr[j][0].includes("P: "); ++j)
-                                {
-                                    maxDrop = 0;
-                                    for (k = j; k < arrSize && !dropArr[k][0].includes("P: "); ++k)
-                                    {
-                                        if(parseInt(dropArr[k][2]) > maxDrop)
-                                        {
-                                            maxDrop = dropArr[k][2];
-                                            maxIndex = k;
-                                        }
-                                    }
-                                    arrHold = dropArr[j];
-                                    dropArr[j] = dropArr[maxIndex];
-                                    dropArr[maxIndex] = arrHold;
-                                }
-                                i = j - 1;
-                            }
-                        }
-
-                        strHold = "";
-                        for(i = 0; i < arrSize; ++i)
-                        {
-                            if(dropArr[i][0].includes("P: ")) strHold += dropArr[i][0].substring(3,dropArr[i][0].length);
-                            else
-                            {
-                                strHold += "\t" + keyToSource(dropArr[i][0]) + " (x" + dropArr[i][1] + "): " + dropArr[i][2] + "%";
-                            }
-                            strHold += "\n";
-                        }
-                        message.reply(strHold);
-                    }
+                    if (item.includes("LowDrops") || item.includes("HighDrops")) message.reply(parseDrops(item));
                 })
             }
             else message.reply('I don\'t have a record of that monster!');
