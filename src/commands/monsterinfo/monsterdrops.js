@@ -15,11 +15,11 @@ function keyToSource(key)
         "Ca":"Capture",
         "FA":"Forearms",
         "HL":"Hindlegs",
-        "HS":"Hard Shell",
-        "IR":"Investigation Reward",
-        "PB":"Palico Bonus",
+        "HS":"Hard shell",
+        "IR":"Investigation reward",
+        "PB":"Palico bonus",
         "Pl":"Plunderblade",
-        "SD":"Shiny Drop",
+        "SD":"Shiny drop",
         "Ta":"Tail",
         "Tr":"Track"
     };

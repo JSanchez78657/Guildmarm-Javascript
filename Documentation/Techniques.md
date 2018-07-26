@@ -250,7 +250,7 @@ Can be stored in array as such:
 
 | |Name|Spawn|Chance|HRP|Zenny|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|Index|0|1|3|4|5|
+|Index|0|1|2|3|4|
 |0|Barroth|IS|100|210|2520|
 |1|Rathian|IS|100|280|4320|
 |2|Diablos|IS|100|350|5400|
@@ -293,7 +293,38 @@ Can be stored in array as such:
 
 # Quest Requests
 When a request is made to give information about a quest, responses will be given as such:
-> Alright, Barroth Quest 2 is an Optional HR 100 quest, in order to take the quest, you need to have completed Barroth 
-Quest, found a Barroth, hunted a Barroth, captured a Barroth, and researched a Barroth. In the quest, you must hunt a 
-Barroth in Wildspire Waste before you faint 3 times or time runs out. Monsters that can appear in this quest: Barroth. 
-Completing this quest awards you with a Barroth Amulet. Potential drops include Barroth Gem (100%).
+>Alright, Old World Monster In The New World is an assigned 7 :star: quest.
+>In order to take this quest, you must be HR 12.
+>In this quest, you must:
+>
+>Complete the assignment: We've finally tracked down the source of those mysterious tracks. Report to the Coral Highlands and seek it out! I'll be expecting your report as soon as you're done!
+>
+>You fail if: 3 faints are reached, or time runs out.
+>
+>Monsters that can appear in this quest:
+>
+>Pink Rathian: Initial spawn, 100% spawn chance. 550 HRP. 12600z.
+>
+>Tzitzi-Ya-Ku: Initial spawn, 100% spawn chance. 350 HRP. 5400z.
+>
+>Legiana: Initial spawn, 100% spawn chance. 500 HRP. 12600z.
+>
+>Odogaron: Invasion spawn, 65% spawn chance. 500 HRP. 12600z.
+>
+>Completing this quest awards you with: 12600 Zenny
+>
+>Potential drops from this quest include:
+>
+>Monster Hardbone (x1) 24%
+>
+>Monster Keenbone (x1) 20%
+>
+>Carbalite Ore (x1) 18%
+>
+>Mysterious Feystone (x1) 18%
+>
+>Novacrystal (x1) 15%
+>
+>Spiritcore Ore (x1) 12%
+>
+>Advanced Armor Sphere (x1) 1%
