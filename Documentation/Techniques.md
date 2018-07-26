@@ -223,10 +223,23 @@ TBD
 |AC|After Cutscene|
 |HRP|Hunter Rank Points|
 |HR|Hunter Rank|
+|In|Invasion Spawn|
 |IS|Initial Spawn|
  
 Quests will have data space for the name, rank, map, monster(s), type, prerequisites, objectives, failure conditions, 
 reward, and drops.
+
+Quest types include:
+```
+Assigned, Optional, Investigation, Event, Special, and Arena
+```
+
+Objectives are the literal text in any case with the exception of "Complete the assignment." quests. For these quests, 
+the objective is stored with it's accompanying description as such:
+```
+Complete the assignment: We've finally tracked down the source of those mysterious tracks. Report to the Coral 
+Highlands and seek it out! I'll be expecting your report as soon as you're done!
+```
 Monster will be stored as such:
 ```
 Barroth,IS,100,210,2520
