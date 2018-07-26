@@ -23,15 +23,3 @@
 |8.|StringValidator calls ErrorMessage, passing "Symbolic."|
 |9.|ErrorMessage tells Guildmarm of the Symbolic input.|
 |10.|Guildmarm responds "Sorry, but I have never seen a monster with those weird symbols in it's name!"|
-
-|**Test Case 3**|**Attempted SQL injection**|
-|---|---|
-|**Tested Actors**|StringValidator, ErrorMessage|
-|**Expected Result**|Guildmarm informs the user that may have just put in a SQL injection, and informs the admin of the possible attempt.|
-|**Flow of events for test scenario**||
-|1.|Test attempts an injection on Guildmarm.|
-|2.|StringValidator detects an injection attempt.|
-|3.|StringValidator calls ErrorMessage, passing "Injection."|
-|4.|ErrorMessage tells Guildmarm of the injection.|
-|5.|Guildmarm responds "I hope that was not on purpose! I detected an injection!"|
-|6.|Guildmarm emails admin with the details of who attempted an injection and what it looked like.|

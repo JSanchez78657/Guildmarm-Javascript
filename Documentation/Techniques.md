@@ -1,49 +1,3 @@
-##### *Monster Part Symbols*
-
-|Symbol|Part|
-|---|---|
-|An|Antennae|
-|Ba|Back|
-|Bo|Body|
-|Ch|Chest|
-|Ex|Exhaust Organ|
-|Fi|Fin|
-|FA|Forearms|
-|FL|Forelegs|
-|He|Head|
-|HL|Hindlegs|
-|Ho|Horn|
-|Ja|Jaw|
-|Le|Legs|
-|LB|Lower Body|
-|Ne|Neck|
-|No|Nose|
-|NP|Neck Pouch|
-|Ro|Rock|
-|Sh|Shell|
-|St|Stomach|
-|Ta|Tail|
-|TT|Tail Tip|
-|To|Tongue|
-|Wi|Wings|
-
-##### *Monster Body Part Modifiers*
-
-|Symbol|Part|
-|---|---|
-|-Bl|Black|
-|-Bo|Bone|
-|-CS|Critical State|
-|-E|Electricity|
-|-GB|Gloss Black|
-|-H|Heated|
-|-MA|Magma Armor|
-|-M|Mud|
-|-R1|Rock 1|
-|-R2|Rock 2|
-|-Wh|White|
-|-Wo|Wounded|
-
 # Monster Resistances
 Monster resistances are stored on the database in strings of the format:
 ```
@@ -101,3 +55,55 @@ Each monster weakness recommendation is be given with both categories
 and the area to concentrate, for example:
 >Alright doodle, if you want to take down a Nergigante, you should hit
 it's tail with a severing thunder weapon!
+
+##### *Monster Part Symbols*
+
+|Symbol|Part|
+|---|---|
+|An|Antennae|
+|Ba|Back|
+|Bo|Body|
+|Ch|Chest|
+|Ex|Exhaust Organ|
+|Fi|Fin|
+|FA|Forearms|
+|FL|Forelegs|
+|He|Head|
+|HL|Hindlegs|
+|Ho|Horn|
+|Ja|Jaw|
+|Le|Legs|
+|LB|Lower Body|
+|Ne|Neck|
+|No|Nose|
+|NP|Neck Pouch|
+|Ro|Rock|
+|Sh|Shell|
+|St|Stomach|
+|Ta|Tail|
+|TT|Tail Tip|
+|To|Tongue|
+|Wi|Wings|
+
+##### *Monster Body Part Modifiers*
+
+|Symbol|Part|
+|---|---|
+|-Bl|Black|
+|-Bo|Bone|
+|-CS|Critical State|
+|-E|Electricity|
+|-GB|Gloss Black|
+|-H|Heated|
+|-MA|Magma Armor|
+|-M|Mud|
+|-R1|Rock 1|
+|-R2|Rock 2|
+|-Wh|White|
+|-Wo|Wounded|
+
+# Monster Drops
+Monster drops are stored in the database in the format:
+```
+
+```
