@@ -6,6 +6,7 @@ let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().sp
 var token = rawText[0];
 
 Guildmarm.registry.registerGroup('monsterinfo');
+Guildmarm.registry.registerGroup('questinfo');
 Guildmarm.registry.registerDefaults();
 Guildmarm.registry.registerCommandsIn(__dirname + '/commands');
 

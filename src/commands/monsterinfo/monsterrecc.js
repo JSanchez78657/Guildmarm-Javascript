@@ -1,80 +1,71 @@
 const Commando = require('discord.js-commando');
 
-function intToDmg(int)
-{
-    switch(int)
-    {
-        case 1: return "sever";
-        case 2: return "blunt";
-        case 3: return "shot";
-        case 4: return "fire";
-        case 5: return "water";
-        case 6: return "thunder";
-        case 7: return "ice";
-        case 8: return "dragon";
-        default: return "ERROR";
-    }
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 }
 
-function    keyToPart(key)
+function intToDmg(int)
 {
-    let part;
-    let fullName;
-    let modifier;
-    if(key.includes("-"))
-    {
-        modifier = key.substring(key.indexOf("-"), key.length - 1);
-        part = key.substring(0, key.indexOf("-"));
-    }
-    else part = key;
+    const element = {
+        1:"sever",
+        2:"blunt",
+        3:"shot",
+        4:"fire",
+        5:"water",
+        6:"thunder",
+        7:"ice",
+        8:"dragon"
+    };
+    return (element[int] || "");
+}
 
-    switch(part)
-    {
-        case "An": fullName = "antennae"; break;
-        case "Ba": fullName = "back"; break;
-        case "Bo": fullName = "body"; break;
-        case "Ch": fullName = "chest"; break;
-        case "Ex": fullName = "exhaust organ"; break;
-        case "Fi": fullName = "fin"; break;
-        case "FA": fullName = "forearms"; break;
-        case "FL": fullName = "forelegs"; break;
-        case "He": fullName = "head"; break;
-        case "HL": fullName = "hindlegs"; break;
-        case "Ho": fullName = "horn"; break;
-        case "Ja": fullName = "jaw"; break;
-        case "Le": fullName = "legs"; break;
-        case "LB": fullName = "lower body"; break;
-        case "Ne": fullName = "neck"; break;
-        case "No": fullName = "nose"; break;
-        case "NP": fullName = "neck pouch"; break;
-        case "Ro": fullName = "rock"; break;
-        case "Sh": fullName = "shell"; break;
-        case "Ta": fullName = "tail"; break;
-        case "TT": fullName = "tail tip"; break;
-        case "To": fullName = "tongue"; break;
-        case "Wi": fullName = "wings"; break;
-        default: fullName = " uhhh.... weak point"; break;
-    }
+function keyToPart(key)
+{
+    const k = key.split("-");
 
-    if(modifier.length > 0)
-    {
-        switch(modifier)
-        {
-            case "Bl": fullName = "black " + fullName; break;
-            case "Bo": fullName = "bony " + fullName; break;
-            case "CS": fullName += " while in it's critical state"; break;
-            case "E":  fullName = "electrified " + fullName; break;
-            case "GB": fullName = "glossy black " + fullName; break;
-            case "H":  fullName = "heated " + fullName; break;
-            case "MA": fullName = "magma covered " + fullName; break;
-            case "M":  fullName = "muddy " + fullName; break;
-            case "R1": fullName = "rock one on it's " + fullName; break;
-            case "R2": fullName = "rock two on it's " + fullName; break;
-            case "Wh": fullName = "white " + fullName; break;
-            case "Wo": fullName = "wounded " + fullName; break;
-        }
-    }
-    return fullName;
+    const part = {
+        "An":"antennae",
+        "Ba":"back",
+        "Bo":"body",
+        "Ch":"chest",
+        "Ex":"exhaust organ",
+        "Fi":"fin",
+        "FA":"forearms",
+        "FL":"forelegs",
+        "He":"head",
+        "HL":"hindlegs",
+        "Ho":"horn",
+        "Ja":"jaw",
+        "Le":"legs",
+        "LB":"lower body",
+        "Ne":"neck",
+        "No":"nose",
+        "NP":"neck pouch",
+        "Ro":"rock",
+        "Sh":"shell",
+        "Ta":"tail",
+        "TT":"tail tip",
+        "To":"tongue",
+        "Wi":"wings"
+    };
+
+    const modifier = {
+            "Bl":"black ",
+            "Bo":"bony ",
+            "CS":"critical ",
+            "E" :"electrified ",
+            "GB":"glossy black ",
+            "H" :"heated " ,
+            "MA":"magma covered ",
+            "M" :"muddy ",
+            "R1":"rock one on it's ",
+            "R2":"rock two on it's ",
+            "Wh":"white ",
+            "Wo":"wounded ",
+    };
+    return (modifier[k[1]] || "") + (part[k[0]] || "");
 }
 
 class Monsterrecc extends Commando.Command
@@ -84,8 +75,8 @@ class Monsterrecc extends Commando.Command
         super(client, {
             name: 'monsterrecc',
             group: 'monsterinfo',
-            memberName: 'reccomendation',
-            description: 'Gives a reccomendation of what type of weapon to bring against this monster.'
+            memberName: 'recommendation',
+            description: 'Gives a recommendation of what type of weapon to bring against this monster.'
         });
     }
 
@@ -96,7 +87,7 @@ class Monsterrecc extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + args.toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
 
         const options =
         {
@@ -112,20 +103,31 @@ class Monsterrecc extends Commando.Command
         request(options, function (error, response, body)
         {
             if (error) throw new Error(error);
+            //Checks if there was an actual monster requested at all.
             if (!args) message.reply('I can\'t just look up nothing!');
+            //Checks if the database had an actual entry for the monster requested.
             else if (body !== '[]')
             {
-                body = body.toString().substring(2, body.lastIndexOf('}]')).split(',');
+                //Remove the end bits of the string ("[{" and "}]), then separates the string using its separators.
+                //Original format of the string is "[{"data-name":"data", "data-name":"data",...,"data-name":"data"}].
+                body = body.toString().substring(2, body.lastIndexOf('}]')).split('","');
+                //Searches through the array for the specific category of information.
                 body.forEach(function (item)
                 {
                     if (item.includes("Resistances"))
                     {
-                        const rawRes = String(item.substr(item.indexOf('":"') + 3, item.lastIndexOf('"')));
+                        //Extracts the actual data from the string.
+                        const rawRes = String(item.substr(item.indexOf('":"') + 3, item.length));
+                        //Separates the string into an array of strings
+                        //In this case, "-body part- x x x x x x x" where x is a number.
                         let resArr = rawRes.split("\\n");
+                        //Used to determine how many body parts the monster has.
                         const hold = resArr.length - 1;
                         let strHold = String();
                         let sum = 0;
                         let maxSum, maxDmg, maxEle, bestPart, i, j;
+                        //Turns the string array into an array of arrays (two-dimensional), where the first column
+                        //of every row is the body part, and the following columns are the resistance numbers.
                         for (i = 0; i < hold; ++i)
                         {
                             strHold = resArr[i];
@@ -133,6 +135,8 @@ class Monsterrecc extends Commando.Command
                             resArr[i] = strHold.split(' ');
                         }
                         maxSum = 0;
+                        //Totals each resistance column, saving the largest total as the most effective for standard
+                        //damage type (severing, blunt, and shot).
                         for (j = 1; j < 4; ++j)
                         {
                             for (i = 0; i < hold; ++i) sum += Number(resArr[i][j]);
@@ -144,6 +148,7 @@ class Monsterrecc extends Commando.Command
                             sum = 0;
                         }
                         maxSum = 0;
+                        //As above, but for the elements (fire, water, thunder, ice, and dragon).
                         for (j = 4; j < 9; ++j)
                         {
                             for (i = 0; i < hold; ++i) sum += Number(resArr[i][j]);
@@ -155,6 +160,8 @@ class Monsterrecc extends Commando.Command
                             sum = 0;
                         }
                         //Using maxSum because I can't think of a better name for maxDmg(sever/blunt/shot).
+                        //Adds together the damage for the combination of the two best damage types on each body part
+                        //to find the most effective place to attack.
                         maxSum = 0;
                         for(i = 0; i < hold; ++i)
                         {
@@ -167,8 +174,8 @@ class Monsterrecc extends Commando.Command
                         }
                         message.reply("Alright doodle, if you want to take down a " + args.toString() +
                                       ", you should bring a " + intToDmg(maxDmg) + " " + intToDmg(maxEle) +
-                                      " weapon, and make sure to hit it's " + keyToPart(resArr[bestPart][0].toString() +
-                                      "!"));
+                                      " weapon, and make sure to hit it's " + keyToPart(resArr[bestPart][0]) +
+                                      "!");
                     }
                 })
             }
