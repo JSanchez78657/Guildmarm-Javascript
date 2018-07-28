@@ -1,40 +1,6 @@
 const Commando = require('discord.js-commando');
 const Dictionary = require('../../dictionary');
 
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
-
-function keyToSource(key)
-{
-    const k = key.split("-");
-
-    const source = {
-        "Bo":"Body",
-        "Ca":"Capture",
-        "FA":"Forearms",
-        "HL":"Hindlegs",
-        "HS":"Hard shell",
-        "IR":"Investigation reward",
-        "PB":"Palico bonus",
-        "Pl":"Plunderblade",
-        "SD":"Shiny drop",
-        "Ta":"Tail",
-        "Tr":"Track"
-    };
-
-    const modifier = {
-        "C":" carve",
-        "G":"(Gold)",
-        "S":"(Silver)",
-        "W":" wound"
-    };
-
-    return (source[k[0]] || "") + (modifier[k[1]] || "");
-}
-
 function parseDrops(item)
 {
     const rawDrops = String(item.substring(item.indexOf('":"') + 3, item.length));
@@ -111,7 +77,7 @@ class Monsterdrops extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + Dictionary.toTitleCase(args).toString() + '"}';
 
         const options =
             {

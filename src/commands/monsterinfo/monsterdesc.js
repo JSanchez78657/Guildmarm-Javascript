@@ -1,10 +1,5 @@
 const Commando = require('discord.js-commando');
-
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
+const Dictionary = require ('../../dictionary');
 
 class Monsterdesc extends Commando.Command
 {
@@ -26,7 +21,7 @@ class Monsterdesc extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + Dictionary.toTitleCase(args).toString() + '"}';
 
         const options =
         {
