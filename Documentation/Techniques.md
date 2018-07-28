@@ -13,6 +13,7 @@
 |He|Head|
 |HL|Hindlegs|
 |Ho|Horn|
+|HS|Hard Shell|
 |Ja|Jaw|
 |Le|Legs|
 |LB|Lower Body|
@@ -105,16 +106,11 @@ it's tail with a severing thunder weapon!
 ##### *Item drop sources*
 |Symbol|Part|
 |---|---|
-|Bo|Body|
 |Ca|Capture|
-|FA|Forearms|
-|HL|Hindlegs|
-|HS|Hard Shell|
 |IR|Investigation Reward|
 |PB|Palico Bonus|
 |Pl|Plunderblade|
 |SD|Shiny Drop|
-|Ta|Tail|
 |Tr|Track|
 
 ##### *Item drop modifiers*
@@ -128,13 +124,13 @@ it's tail with a severing thunder weapon!
 # Items
 Monsters store a string list of the parts they drop, in the form:
 ```
-Barroth Claw
+P: Barroth Claw
 FA-W 1 100
 Pl 1 18
 Ca 1 18
 IR-G 1 25
 IR-S 1 22
-Barroth Shell
+P: Barroth Shell
 HL-W 2 100
 Tr 1 100
 Ta-C 1 20
@@ -143,25 +139,25 @@ Bo-C 1 31
 Ca 1 31
 IR-G 3 10
 IR-S 2 14
-Barroth Ridge
+P: Barroth Ridge
 HS-C 1 20
 Pl 1 30
 Bo-C 1 24
 Ca 1 24
 IR-G 3 14
 IR-S 2 18
-Barroth Tail
+P: Barroth Tail
 Ta-C 1 80
 Bo-C 1 12
 Ca 1 12
 IR-G 1 20
 IR-S 1 16
-Barroth Scalp
+P: Barroth Scalp
 HS-C 1 80
 Ca 1 15
 IR-G 1 21
 IR-S 1 18
-Fertile Mud
+P: Fertile Mud
 SD 1 50
 Pl 1 18
 IR-G 3 10
@@ -213,7 +209,49 @@ quests themselves. The string is tokenized with spaces and newlines, and will be
 |35|IR-S|1|12|
 
 # Monster Drops
-TBD
+Monster drops will be shown in a list, drop sources will be shown followed by a list of all the items from the sources, 
+sorted in a descending list of drop chances, as such:
+```
+Barroth Claw
+    Forearms wound (x1): 100%
+    Investigation reward(Gold) (x1): 25%
+    Investigation reward(Silver) (x1): 22%
+    Plunderblade (x1): 18%
+    Capture (x1): 18%
+Barroth Shell
+    Hindlegs wound (x2): 100%
+    Track (x1): 100%
+    Plunderblade (x1): 37%
+    Body carve (x1): 31%
+    Capture (x1): 31%
+    Tail carve (x1): 20%
+    Investigation reward(Silver) (x2): 14%
+    Investigation reward(Gold) (x3): 10%
+Barroth Ridge
+    Plunderblade (x1): 30%
+    Body carve (x1): 24%
+    Capture (x1): 24%
+    Hard shell carve (x1): 20%
+    Investigation reward(Silver) (x2): 18%
+    Investigation reward(Gold) (x3): 14%
+Barroth Tail
+    Tail carve (x1): 80%
+    Investigation reward(Gold) (x1): 20%
+    Investigation reward(Silver) (x1): 16%
+    Body carve (x1): 12%
+    Capture (x1): 12%
+Barroth Scalp
+    Hard shell carve (x1): 80%
+    Investigation reward(Gold) (x1): 21%
+    Investigation reward(Silver) (x1): 18%
+    Capture (x1): 15%
+Fertile Mud
+    Shiny drop (x1): 50%
+    Plunderblade (x1): 18%
+    Investigation reward(Silver) (x1): 12%
+    Investigation reward(Gold) (x3): 10%
+```
+A list of drops for both high rank and low rank will be generated and sent to the user as to not spam chat too hard.
 
 # Quests
 
@@ -328,3 +366,9 @@ When a request is made to give information about a quest, responses will be give
 >Spiritcore Ore (x1) 12%
 >
 >Advanced Armor Sphere (x1) 1%
+
+# *Item Search*
+When given a command to search for an item, Guildmarm queries the server for the collection of monsters and checks each 
+monster's low rank and high rank drops to see if it contains the requested item. If it does, the string is extracted, 
+and parsed to get the quantity and rarity of the item from the drop table. Te same is done with the quest collection. 
+Drops will be listed as such:

@@ -1,72 +1,5 @@
 const Commando = require('discord.js-commando');
-
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
-}
-
-function intToDmg(int)
-{
-    const element = {
-        1:"sever",
-        2:"blunt",
-        3:"shot",
-        4:"fire",
-        5:"water",
-        6:"thunder",
-        7:"ice",
-        8:"dragon"
-    };
-    return (element[int] || "");
-}
-
-function keyToPart(key)
-{
-    const k = key.split("-");
-
-    const part = {
-        "An":"antennae",
-        "Ba":"back",
-        "Bo":"body",
-        "Ch":"chest",
-        "Ex":"exhaust organ",
-        "Fi":"fin",
-        "FA":"forearms",
-        "FL":"forelegs",
-        "He":"head",
-        "HL":"hindlegs",
-        "Ho":"horn",
-        "Ja":"jaw",
-        "Le":"legs",
-        "LB":"lower body",
-        "Ne":"neck",
-        "No":"nose",
-        "NP":"neck pouch",
-        "Ro":"rock",
-        "Sh":"shell",
-        "Ta":"tail",
-        "TT":"tail tip",
-        "To":"tongue",
-        "Wi":"wings"
-    };
-
-    const modifier = {
-            "Bl":"black ",
-            "Bo":"bony ",
-            "CS":"critical ",
-            "E" :"electrified ",
-            "GB":"glossy black ",
-            "H" :"heated " ,
-            "MA":"magma covered ",
-            "M" :"muddy ",
-            "R1":"rock one on it's ",
-            "R2":"rock two on it's ",
-            "Wh":"white ",
-            "Wo":"wounded ",
-    };
-    return (modifier[k[1]] || "") + (part[k[0]] || "");
-}
+const Dictionary = require('../../dictionary');
 
 class Monsterrecc extends Commando.Command
 {
@@ -87,7 +20,7 @@ class Monsterrecc extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + toTitleCase(args).toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + Dictionary.toTitleCase(args).toString() + '"}';
 
         const options =
         {
@@ -172,9 +105,10 @@ class Monsterrecc extends Commando.Command
                                 bestPart = i;
                             }
                         }
-                        message.reply("Alright doodle, if you want to take down a " + args.toString() +
-                                      ", you should bring a " + intToDmg(maxDmg) + " " + intToDmg(maxEle) +
-                                      " weapon, and make sure to hit it's " + keyToPart(resArr[bestPart][0]) +
+                        message.reply("Alright doodle, if you want to take down a " +
+                                      Dictionary.toTitleCase(args.toString()) + ", you should bring a " +
+                                      Dictionary.keyToDef(maxDmg) + " " + Dictionary.keyToDef(maxEle) +
+                                      " weapon, and make sure to hit it's " + Dictionary.keyToDef(resArr[bestPart][0]) +
                                       "!");
                     }
                 })

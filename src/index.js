@@ -7,6 +7,7 @@ var token = rawText[0];
 
 Guildmarm.registry.registerGroup('monsterinfo');
 Guildmarm.registry.registerGroup('questinfo');
+Guildmarm.registry.registerGroup('iteminfo');
 Guildmarm.registry.registerDefaults();
 Guildmarm.registry.registerCommandsIn(__dirname + '/commands');
 

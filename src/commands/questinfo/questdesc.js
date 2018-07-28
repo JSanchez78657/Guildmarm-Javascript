@@ -1,23 +1,5 @@
 const Commando = require('discord.js-commando');
-
-function getInfo(str) { return str.substring(str.indexOf('":"') + 3, str.length); }
-
-function checkVowel(str)
-{
-    let vowels = ['a', 'e', 'i', 'o', 'u'];
-    let hold = "a " + str.toLowerCase();
-    vowels.forEach(function (item) { if(str.toLowerCase().charAt(0) === item) hold = "an " + str.toLowerCase(); });
-    return hold;
-}
-
-function stringToArr(str, tok)
-{
-    let size, i;
-    str = str.split("\\n");
-    size = str.length;
-    for(i = 0; i < size; ++i) str[i] = str[i].split(tok);
-    return str;
-}
+const Dictionary = require('../../dictionary');
 
 function listPrereqs(str)
 {
@@ -55,26 +37,15 @@ function listPrereqs(str)
     return str;
 }
 
-function keyToType(str)
-{
-    const type = {
-        "AC":"After cutscene",
-        "In":"Invasion spawn",
-        "IS":"Initial spawn",
-    };
-    return type[str];
-}
-
 function listMonsters(str)
 {
-    let arr = stringToArr(str, ",");
+    let arr = Dictionary.stringToArr(str, ",");
     let size, i;
-    console.log(str);
     str = "";
     size = arr.length;
     for(i = 0; i < size; ++i)
     {
-        str += "\n\t" + arr[i][0] + ": " + keyToType(arr[i][1]) + ", " + arr[i][2] + "% spawn chance. " +
+        str += "\n\t" + arr[i][0] + ": " + Dictionary.keyToDef(arr[i][1]) + ", " + arr[i][2] + "% spawn chance. " +
                arr[i][3] + " HRP. " + arr[i][4] + "z.";
     }
     str = str.substring(0, str.lastIndexOf('.') + 1);
@@ -83,20 +54,13 @@ function listMonsters(str)
 
 function listDrops(str)
 {
-    let arr = stringToArr(str, ",");
+    let arr = Dictionary.stringToArr(str, ",");
     let size, i;
     str = "";
     size = arr.length;
     for(i = 0; i < size; ++i) str += "\t" + arr[i][0] + " (x" + arr[i][1] + ") " + arr[i][2] + "%\n";
     str = str.substring(0, str.lastIndexOf("\n"));
     return str;
-}
-
-function toTitleCase(str)
-{
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
 }
 
 class Questdesc extends Commando.Command
@@ -118,7 +82,7 @@ class Questdesc extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/quests?q={"Name": "' + toTitleCase(args) + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/quests?q={"Name": "' + Dictionary.toTitleCase(args) + '"}';
 
         const options =
             {
@@ -149,20 +113,20 @@ class Questdesc extends Commando.Command
                 name = rank = map = type = prereq = objective = fail = qReward = qDrops = monsters = "";
                 //Searches through the array for the specific category of information.
                 body.forEach(function (item) {
-                    if(item.includes("Name")) name = getInfo(item);
-                    else if(item.includes("Type")) type = getInfo(item);
-                    else if(item.includes("Rank")) rank = getInfo(item);
-                    else if(item.includes("Map")) map = getInfo(item);
-                    else if(item.includes("Prerequisites")) prereq = getInfo(item);
-                    else if(item.includes("Fail")) fail = getInfo(item);
-                    else if(item.includes("QuestReward")) qReward = getInfo(item);
-                    else if(item.includes("Objective")) objective = getInfo(item);
-                    else if(item.includes("Drops")) qDrops = getInfo(item);
-                    else if(item.includes("Monsters")) monsters = getInfo(item);
+                    if(item.includes("Name")) name = Dictionary.getInfo(item);
+                    else if(item.includes("Type")) type = Dictionary.getInfo(item);
+                    else if(item.includes("Rank")) rank = Dictionary.getInfo(item);
+                    else if(item.includes("Map")) map = Dictionary.getInfo(item);
+                    else if(item.includes("Prerequisites")) prereq = Dictionary.getInfo(item);
+                    else if(item.includes("Fail")) fail = Dictionary.getInfo(item);
+                    else if(item.includes("QuestReward")) qReward = Dictionary.getInfo(item);
+                    else if(item.includes("Objective")) objective = Dictionary.getInfo(item);
+                    else if(item.includes("Drops")) qDrops = Dictionary.getInfo(item);
+                    else if(item.includes("Monsters")) monsters = Dictionary.getInfo(item);
                 });
                 console.log(name + '\n' + type + '\n' + rank + '\n' + map + '\n' + prereq + '\n' + fail + '\n' +
                             qReward + '\n' + objective + '\n' + qDrops + '\n' + monsters);
-                strHold = "\nAlright, " + name + " is " + checkVowel(type) + " rank " + rank + " quest.\n" +
+                strHold = "\nAlright, " + name + " is " + Dictionary.checkVowel(type) + " rank " + rank + " quest.\n" +
                           "In order to take this quest, you must " + listPrereqs(prereq) + "\n" +
                           "In this quest, you must:\n\n" +
                           objective + "\n\n" +
