@@ -1,15 +1,15 @@
 const Commando = require('discord.js-commando');
-const Dictionary = require ('../../dictionary');
+const Dictionary = require('../../dictionary');
 
-class Monsterdesc extends Commando.Command
+class Monstersearch extends Commando.Command
 {
     constructor(client)
     {
         super(client, {
-            name: 'monsterdesc',
+            name: 'monstersearch',
             group: 'monsterinfo',
-            memberName: 'description',
-            description: 'Gives the in game journal description of a monster'
+            memberName: 'search',
+            description: 'Gives a list of quests to take to fight this monster.'
         });
     }
 
@@ -17,23 +17,26 @@ class Monsterdesc extends Commando.Command
     {
         const request = require('request');
         const fs = require('fs');
+        args = Dictionary.toTitleCase(args);
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/monsters?q={"Name": "' + Dictionary.toTitleCase(args).toString() + '"}';
+        const url = 'https://sophiadb-1e63.restdb.io/rest/quests';
 
         const options =
-        {
-            method: 'GET',
-            url: url,
-            headers:
             {
-                'cache-control': 'no-cache',
-                'x-apikey': apiKey
-            }
-        };
+                method: 'GET',
+                url: url,
+                headers:
+                    {
+                        'cache-control': 'no-cache',
+                        'x-apikey': apiKey
+                    }
+            };
 
         request(options, function (error, response, body) {
+            let nameHold, strHold, arrHold, i;
+            strHold = "";
             if (error) throw new Error(error);
             //Checks if there was an actual monster requested at all.
             if(!args) message.reply('I can\'t just look up nothing!');
@@ -46,12 +49,19 @@ class Monsterdesc extends Commando.Command
                 //Searches through the array for the specific category of information.
                 body.forEach(function (item) {
                     //Extracts the actual data from the string.
-                    if (item.includes("Description")) message.reply(item.substring(item.indexOf('":"') + 3, item.length));
-                })
+                    if(item.includes("Name")) nameHold = Dictionary.getInfo(item);
+                    if(item.includes("Monsters") && item.includes(args))
+                    {
+                        arrHold = Dictionary.stringToArr(Dictionary.getInfo(item), ",");
+                        for(i = 0; i < arrHold.length; ++i) if(arrHold[i][0] === args) strHold += nameHold;
+                    }
+                });
+                if(strHold === "") message.reply("Sorry doodle! I can't find any quests where you hunt a " + args);
+                else message.reply("Alright, doodle! You can hunt a " + args + " in these quests: \n" + strHold);
             }
             else message.reply('I don\'t have a record of that monster!');
         });
     }
 }
 
-module.exports = Monsterdesc;
+module.exports = Monstersearch;
