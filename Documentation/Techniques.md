@@ -100,8 +100,10 @@ a normal hit, with the optimal element and damage type, the part that
 returns the greatest value is be the recommended area to attack.
 Each monster weakness recommendation is be given with both categories
 and the area to concentrate, for example:
->Alright doodle, if you want to take down a Nergigante, you should hit
-it's tail with a severing thunder weapon!
+```
+Alright doodle, if you want to take down a Rathalos, you should bring a blunt dragon weapon, 
+and make sure to hit it's head!
+```
 
 ##### *Item drop sources*
 |Symbol|Part|
@@ -331,44 +333,47 @@ Can be stored in array as such:
 
 # Quest Requests
 When a request is made to give information about a quest, responses will be given as such:
->Alright, Old World Monster In The New World is an assigned 7 :star: quest.
->In order to take this quest, you must be HR 12.
->In this quest, you must:
->
->Complete the assignment: We've finally tracked down the source of those mysterious tracks. Report to the Coral Highlands and seek it out! I'll be expecting your report as soon as you're done!
->
->You fail if: 3 faints are reached, or time runs out.
->
->Monsters that can appear in this quest:
->
->Pink Rathian: Initial spawn, 100% spawn chance. 550 HRP. 12600z.
->
->Tzitzi-Ya-Ku: Initial spawn, 100% spawn chance. 350 HRP. 5400z.
->
->Legiana: Initial spawn, 100% spawn chance. 500 HRP. 12600z.
->
->Odogaron: Invasion spawn, 65% spawn chance. 500 HRP. 12600z.
->
->Completing this quest awards you with: 12600 Zenny
->
->Potential drops from this quest include:
->
->Monster Hardbone (x1) 24%
->
->Monster Keenbone (x1) 20%
->
->Carbalite Ore (x1) 18%
->
->Mysterious Feystone (x1) 18%
->
->Novacrystal (x1) 15%
->
->Spiritcore Ore (x1) 12%
->
->Advanced Armor Sphere (x1) 1%
+```
+Alright, Old World Monster In The New World is an assigned rank 7 quest.
+In order to take this quest, you must be HR 12.
+In this quest, you must:
+
+Complete the assignment: We've finally tracked down the source of those mysterious tracks. Report to the Coral Highlands and seek it out! I'll be expecting your report as soon as you're done!
+
+You fail if: 3 faints are reached, or time runs out.
+Monsters that can appear in this quest:
+    Pink Rathian: Initial spawn, 100% spawn chance. 550 HRP. 12600z.
+    Tzitzi-Ya-Ku: Initial spawn, 100% spawn chance. 350 HRP. 5400z.
+    Legiana: Initial spawn, 100% spawn chance. 500 HRP. 12600z.
+    Odogaron: Invasion spawn, 65% spawn chance. 500 HRP. 12600z.
+Completing this quest awards you with: 12600 Zenny
+Potential drops from this quest include: 
+    Monster Hardbone (x1) 24%
+    Monster Keenbone (x1) 20%
+    Carbalite Ore (x1) 18%
+    Mysterious Feystone (x1) 18%
+    Novacrystal (x1) 15%
+    Spiritcore Ore (x1) 12%
+    Advanced Armor Sphere (x1) 1%
+```
 
 # *Item Search*
 When given a command to search for an item, Guildmarm queries the server for the collection of monsters and checks each 
 monster's low rank and high rank drops to see if it contains the requested item. If it does, the string is extracted, 
-and parsed to get the quantity and rarity of the item from the drop table. Te same is done with the quest collection. 
-Drops will be listed as such:
+and parsed to get the quantity and rarity of the item from the drop table. The same is done with the quest collection. 
+Responses for monsters:
+```
+Monsters that drop Fertile Mud:
+    Barroth
+        Low Rank:
+            Shiny Drop (x1): 50%
+            Plunderblade (x1): 18%
+            Investigation Reward (Silver) (x1): 12%
+            Investigation Reward (Gold) (x3): 10%
+```
+Responses for quests:
+```
+Quests that drop Monster Keenbone:
+    Old World Monster In The New World
+         Quest Reward (x1) (20%)
+```
