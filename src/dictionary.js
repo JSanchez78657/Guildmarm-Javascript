@@ -50,6 +50,7 @@ class Dictionary
             "To":"tongue",
             "Wi":"wings",
             //Misc drop sources
+            "QR":"Quest Reward",
             "Ca":"Capture",
             "IR":"Investigation reward ",
             "PB":"Palico bonus",

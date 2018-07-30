@@ -44,10 +44,10 @@ function parseDrops(item)
         strHold = "";
         for (i = 0; i < arrSize; ++i)
         {
-            if (dropArr[i][0].includes("P: ")) strHold += dropArr[i][0].substring(3, dropArr[i][0].length);
+            if (dropArr[i][0].includes("P: ")) strHold += "\t" + dropArr[i][0].substring(3, dropArr[i][0].length);
             else
             {
-                strHold += "\t" + Dictionary.toTitleCase(Dictionary.keyToDef(dropArr[i][0])) + " (x" + dropArr[i][1] +
+                strHold += "\t\t" + Dictionary.toTitleCase(Dictionary.keyToDef(dropArr[i][0])) + " (x" + dropArr[i][1] +
                            "): " + dropArr[i][2] + "%";
             }
             strHold += "\n";
@@ -103,9 +103,11 @@ class Monsterdrops extends Commando.Command
                 body = body.toString().substring(2, body.lastIndexOf('}]')).split('","');
                 //Searches through the array for the specific category of information.
                 body.forEach(function (item) {
-                    if (item.includes("LowDrops") || item.includes("HighDrops")) strHold += parseDrops(item) + '\n';
+                    if (item.includes("LowDrops")) strHold += "Low Rank:\n" + parseDrops(item) + '\n';
+                    else if (item.includes("HighDrops")) strHold += "High Rank:\n" + parseDrops(item) + '\n';
                 });
                 message.author.send(strHold);
+                message.reply("I sent you a direct message with the drops you requested!");
             }
             else message.reply('I don\'t have a record of that monster!');
         });
