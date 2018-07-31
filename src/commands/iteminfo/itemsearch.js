@@ -78,8 +78,8 @@ class Itemsearch extends Commando.Command
         args = Dictionary.toTitleCase(args);
 
         const apiKey = rawText[1];
-        const monUrl = 'https://sophiadb-1e63.restdb.io/rest/monsters';
-        const questUrl = 'https://sophiadb-1e63.restdb.io/rest/quests';
+        const monUrl = rawText[2] + 'monsters';
+        const questUrl = rawText[2] + 'quests';
 
         const monGrab =
             {

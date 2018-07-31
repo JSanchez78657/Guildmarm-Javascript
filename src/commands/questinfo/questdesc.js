@@ -82,7 +82,7 @@ class Questdesc extends Commando.Command
 
         let rawText = fs.readFileSync('./resources/SophiaPWD.txt', 'utf8').toString().split("\r\n");
         const apiKey = rawText[1];
-        const url = 'https://sophiadb-1e63.restdb.io/rest/quests?q={"Name": "' + Dictionary.toTitleCase(args) + '"}';
+        const url = rawText[2] + 'quests?q={"Name": "' + Dictionary.toTitleCase(args) + '"}';
 
         const options =
             {
