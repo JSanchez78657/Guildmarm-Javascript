@@ -126,7 +126,7 @@ class Questdesc extends Commando.Command
                 });
                 //console.log(name + '\n' + type + '\n' + rank + '\n' + map + '\n' + prereq + '\n' + fail + '\n' +
                 //            qReward + '\n' + objective + '\n' + qDrops + '\n' + monsters);
-                strHold = "\nAlright, " + name + " is " + Dictionary.checkVowel(type) + " rank " + rank + " quest.\n" +
+                strHold = "\nAlright, " + name + " is " + Dictionary.checkVowel(type) + " " + rank + "★ quest.\n" +
                           "In order to take this quest, you must " + listPrereqs(prereq) + "\n" +
                           "In this quest, you must:\n\n" +
                           objective + "\n\n" +
