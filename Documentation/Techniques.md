@@ -282,9 +282,9 @@ Highlands and seek it out! I'll be expecting your report as soon as you're done!
 ```
 Monster will be stored as such:
 ```
-Barroth,IS,100,210,2520
-Rathian,IS,100,280,4320
-Diablos,IS,100,350,5400 
+Barroth|IS|100|210|2520
+Rathian|IS|100|280|4320
+Diablos|IS|100|350|5400 
 ```
 Can be stored in array as such:
 
@@ -297,13 +297,13 @@ Can be stored in array as such:
 
 Drops will be stored as such:
 ```
-Monster Bone M,1,24
-Earth Crystal,1,20
-Boulder Bone,1,16
-Monster Bone S,2,15
-Nitroshroom,3,12
-Thunderbug,3,12
-Armor Sphere,1,1
+Monster Bone M|1|24
+Earth Crystal|1|20
+Boulder Bone|1|16
+Monster Bone S|2|15
+Nitroshroom|3|12
+Thunderbug|3|12
+Armor Sphere|1|1
 ```
 Can be stored in array as such:
 
