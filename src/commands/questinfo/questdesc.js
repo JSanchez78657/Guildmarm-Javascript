@@ -39,7 +39,7 @@ function listPrereqs(str)
 
 function listMonsters(str)
 {
-    let arr = Dictionary.stringToArr(str, ",");
+    let arr = Dictionary.stringToArr(str, "|");
     let size, i;
     str = "";
     size = arr.length;
@@ -54,7 +54,7 @@ function listMonsters(str)
 
 function listDrops(str)
 {
-    let arr = Dictionary.stringToArr(str, ",");
+    let arr = Dictionary.stringToArr(str, "|");
     let size, i;
     str = "";
     size = arr.length;
